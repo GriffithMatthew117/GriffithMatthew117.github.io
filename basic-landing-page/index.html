@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" class="full-height">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Country Greens || Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Default Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        #hero-title {
+            padding-top: 1em;
+            /* font-weight: 800%; */
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 72pt;
+        }
+
+        /* #navbarSupportedContent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        #hero-sub {
+            font-weight: 600;
+            font-size: 28pt;
+        }
+
+        hr {
+            background-color: #ffffff;
+            height: 2px;
+            width: 75%;
+        }
+
+        #infotitle {
+
+            color: #2BBBAD !important;
+        }
+
+        #mail-icon {
+            padding-top: 1em;
+            color: #2BBBAD !important;
+        }
+
+        #map-marker {
+            padding-top: 1em;
+            color: #2BBBAD !important;
+        }
+
+        #phone-icon {
+            padding-top: 1em;
+            color: #2BBBAD !important;
+        }
+
+        .flex-center {
+            color: #fff;
+        }
+
+        .intro-1 {
+            background: url("https://i.imgur.com/C3qZOAj.jpg")no-repeat center center;
+            background-size: cover;
+        }
+
+        .navbar .btn-group .dropdown-menu a:hover {
+            color: #000 !important;
+        }
+
+        #nav-docs {
+            padding-left: 5em;
+        }
+
+        #map-container {
+            height: 550px;
+            width: 100%;
+            padding: 2em;
+        }
+
+        #info-div {
+            padding: 0px;
+        }
+
+        #send-btn {
+            background-color: #2BBBAD !important;
+        }
+
+        #contact-title {
+            padding-top: 1em;
+        }
+
+        #down-scroll {
+            padding-top: 1.5em;
+        }
+
+        /* .navbar .btn-group .dropdown-menu a:active {
+            color: #fff !important;
+        } */
+
+        @media only screen and (max-width: 667px) {
+            .display-3 {
+                font-size: 3rem;
+            }
+
+            #scroller {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            #hero-title {
+                font-size: 36pt;
+            }
+
+            #hero-sub {
+                font-size: 16pt;
+            }
+
+            .display-3 {
+                font-size: 2rem;
+                margin-top: 5rem;
+            }
+            h3 {
+                font-size: 1rem;
+            }
+
+            #scroller {
+                display: none;
+            }
+
+
+        }
+
+
+        @-webkit-keyframes ani-mouse {
+            0% {
+                opacity: 1;
+                top: 29%;
+            }
+            15% {
+                opacity: 1;
+                top: 50%;
+            }
+            50% {
+                opacity: 0;
+                top: 50%;
+            }
+            100% {
+                opacity: 0;
+                top: 29%;
+            }
+        }
+
+        @-moz-keyframes ani-mouse {
+            0% {
+                opacity: 1;
+                top: 29%;
+            }
+            15% {
+                opacity: 1;
+                top: 50%;
+            }
+            50% {
+                opacity: 0;
+                top: 50%;
+            }
+            100% {
+                opacity: 0;
+                top: 29%;
+            }
+        }
+
+        @keyframes mouse-opac {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes ani-mouse {
+            0% {
+                opacity: 1;
+                top: 29%;
+            }
+            15% {
+                opacity: 1;
+                top: 50%;
+            }
+            50% {
+                opacity: 0;
+                top: 50%;
+            }
+            100% {
+                opacity: 0;
+                top: 29%;
+            }
+        }
+
+        .scroll-btn {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        .scroll-btn>* {
+            display: inline-block;
+            line-height: 18px;
+            font-size: 13px;
+            font-weight: normal;
+            color: #7f8c8d;
+            color: #ffffff;
+            font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .scroll-btn>*:hover,
+        .scroll-btn>*:focus,
+        .scroll-btn>*.active {
+            color: #ffffff;
+        }
+
+        .scroll-btn>*:hover,
+        .scroll-btn>*:focus,
+        .scroll-btn>*:active,
+        .scroll-btn>*.active {
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+        }
+
+        .scroll-btn .mouse {
+            position: relative;
+            display: block;
+            width: 35px;
+            height: 55px;
+            margin: 0 auto 20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-animation: mouse-opac 3s linear;
+            box-sizing: border-box;
+            border: 3px solid rgb(255, 255, 255);
+            border-radius: 23px;
+        }
+
+        .scroll-btn .mouse>* {
+            position: absolute;
+            display: block;
+            top: 30%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            margin: -4px 0 0 -4px;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            -webkit-animation: ani-mouse 2.5s linear infinite;
+            -moz-animation: ani-mouse 2.5s linear infinite;
+            animation: ani-mouse 2.5s linear infinite;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg d-flex justify-content-center fixed-top bg-white navbar-inverse navbar-light">
+            <button id="nav-main" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="nav-list" class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link  ml-4" href="#">Home </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Documents</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="login.html">Documents Home</a>
+                                <a class="dropdown-item" href="login.html">Minutes</a>
+                                <a class="dropdown-item" href="login.html">Updates</a>
+                                <a class="dropdown-item" href="login.html">Newsletters</a>
+                                <a class="dropdown-item" href="login.html">Insurance Forms</a>
+                                <a class="dropdown-item" href="login.html">Registration Forms</a>
+
+                            </div>
+
+                        </li>
+
+                        <li class="nav-item btn-group">
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--/.Navbar-->
+
+        <!--Intro Section-->
+        <section class="view intro-1 hm-black-slight">
+            <div class="full-bg-img flex-center">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <h1 id="hero-title" class="display-3 font-bold wow fadeInDown" data-wow-delay="0.2s">Country Greens</h1>
+                        </li>
+                        <hr>
+                        <li>
+                            <h4 id="hero-sub" class="mt-4 mb-5 wow fadeInDown">Owners Association</h4>
+                        </li>
+                        <li>
+                            <button id="down-scroll" class="btn btn-default">Contact</button>
+                        </li>
+                    </ul>
+                    <span id="scroller" class="scroll-btn d-flex justify-content-center">
+                        <span class="mouse" data-wow-delay="0.2s">
+                            <span>
+
+                            </span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+    </header>
+
+    <!-- Main container-->
+    <div class="container">
+
+        <div id="info-div" class="divider-new pt-5">
+            <h2 id="infotitle" class="h2-responsive mx-4 font-bold wow fadeIn">Information</h2>
+        </div>
+
+        <!--Section: Best features-->
+        <section id="best-features">
+
+            <div class="row pt-3">
+
+                <!--First columnn-->
+                <div class="col-lg-3 mb-r">
+
+                    <!--Card-->
+                    <div class="card hoverable wow fadeIn">
+
+                        <!--Card image-->
+                        <a href="login.html">
+                            <img class="img-fluid" src="https://images.pexels.com/photos/17663/pexels-photo.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb"
+                                alt="Photo by Adrianna Calvo">
+                        </a>
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title text-center">Updates</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">View the latest community updates</p>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--First columnn-->
+
+                <!--Second columnn-->
+                <div class="col-lg-3 mb-r">
+                    <!--Card-->
+                    <div class="card hoverable wow fadeIn" data-wow-delay="0.2s">
+
+                        <!--Card image-->
+                        <a href="login.html">
+                            <img class="img-fluid" src="https://images.pexels.com/photos/6053/man-hands-reading-boy.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb"
+                                alt="Card image cap">
+                        </a>
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title text-center">Newsletters</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">See the latest
+                                <br> newsletter</p>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--Second columnn-->
+
+                <!--Third columnn-->
+                <div class="col-lg-3 mb-r">
+                    <!--Card-->
+                    <div class="card hoverable wow fadeIn" data-wow-delay="0.4s">
+
+                        <!--Card image-->
+                        <a href="login.html">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1508962914676-134849a727f0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5286d12e1a76e790bd5c8f1a2640aa7e&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb"
+                                alt="Card image cap">
+                        </a>
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title text-center">Minutes</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">View the mintues from the latest board meeting</p>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--Third columnn-->
+
+                <!--First columnn-->
+                <div class="col-lg-3 mb-r">
+                    <!--Card-->
+                    <div class="card hoverable wow fadeIn" data-wow-delay="0.6s">
+
+                        <!--Card image-->
+                        <a href="login.html">
+                            <img class="img-fluid" src="https://i.imgur.com/CbcIfK6.jpg" alt="Card image cap">
+                        </a>
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title text-center">Registration</h4>
+                            <hr>
+                            <!--Text-->
+                            <p class="card-text">View the occupant
+                                <br> registration forms</p>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--First columnn-->
+            </div>
+
+        </section>
+
+        <!--Section: Contact-->
+        <section id="contact pb-5">
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-8 mb-5">
+                    <div id="map-container" class="z-depth-1 wow fadeIn">
+                        <!-- Form contact -->
+                        <form action="/send-email" method="post">
+
+                            <p class="h5 text-center mb-4">Contact us</p>
+
+                            <div class="md-form">
+                                <i class="fa fa-user prefix grey-text"></i>
+                                <input type="text" id="form3" class="form-control">
+                                <label for="form3">Your name</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fa fa-envelope prefix grey-text"></i>
+                                <input type="text" id="form2" class="form-control">
+                                <label for="form2">Your email</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fa fa-tag prefix grey-text"></i>
+                                <input type="text" id="form32" class="form-control">
+                                <label for="form34">Subject</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fa fa-pencil prefix grey-text"></i>
+                                <textarea type="text" id="form8" class="md-textarea" style="height: 100px"></textarea>
+                                <label for="form8">Your message</label>
+                            </div>
+
+                            <div class="text-center">
+                                <button id="send-btn" class="btn btn-unique">Send
+                                    <i class="fa fa-paper-plane-o ml-1"></i>
+                                </button>
+                            </div>
+
+                        </form>
+                        <!-- Form contact -->
+                    </div>
+                </div>
+                <!--/First column-->
+
+                <!--Second column-->
+                <div class="col-md-4">
+                    <ul class="text-center list-unstyled">
+                        <h3 id="contact-title">Contact Information</h3>
+                        <li class="wow fadeIn" data-wow-delay="0.2s">
+                            <i id="map-marker" class="fa fa-map-marker fa-2x"></i>
+                            <p>2261 Cosmos Court,
+                                <br> Suite 101 Carlsbad, CA 92011</p>
+                        </li>
+
+                        <li class="wow fadeIn mt-5 pt-2" data-wow-delay="0.3s">
+                            <i id="phone-icon" class="fa fa-phone fa-2x"></i>
+                            <p>(760) 918-1660</p>
+                        </li>
+
+                        <li class="wow fadeIn mt-5 pt-2" data-wow-delay="0.4s">
+                            <i id="mail-icon" class="fa fa-envelope fa-2x"></i>
+                            <p>Sara@Guardian4HOA.com</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--/Second column-->
+            </div>
+        </section>
+        <!--Section: Contact-->
+
+    </div>
+    <!--/ Main container-->
+
+
+
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <!--Google Maps-->
+    <!-- <script src="https://maps.google.com/maps/api/js"></script> -->
+
+    <script>
+        $(function () {
+            $('#down-scroll').bind("click", function () {
+                $('html, body').animate({ scrollTop: $(document).height() }, 1000);
+                return false;
+            });
+        });
+    </script>
+
+
+
+
+    <!-- Animations init-->
+    <script>
+        new WOW().init();
+    </script>
+
+
+</body>
+
+</html>
